@@ -30,7 +30,7 @@ commit des fichiers
 ![image](https://github.com/user-attachments/assets/86cba6dd-7bd4-4faa-a5e2-29e0580ac3f3)
 ![image](https://github.com/user-attachments/assets/73b1fa96-1e6b-4655-bba0-09c50b00a874)
 
-
+git clone adresse du dépot sur Oracle
 
 
 
