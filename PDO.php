@@ -12,8 +12,8 @@
 // Connexion à la base de données
 $host = '127.0.0.1';
 $db   = 'chartrmedic';
-$user = 'root';
-$pass = '';
+$user = 'quentin';
+$pass = 'Azerty123';
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
