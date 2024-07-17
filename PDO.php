@@ -10,11 +10,11 @@
 <h1>Liste des médicaments</h1>
 <?php
 // Connexion à la base de données
-$host = '127.0.0.1';
-$db   = 'chartrmedic';
-$user = 'quentin';
-$pass = 'Azerty123';
-$charset = 'utf8mb4';
+    $host = 'localhost';
+    $db   = 'chartrmedic';
+    $user = getenv('USER') ? getenv('USER') : "root";
+    $pass = getenv('PASSWORD') ? getenv('PASSWORD') : "Azerty123";
+    $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 $options = [
