@@ -57,7 +57,7 @@ création d'un compte Oracle
 
 OCI (Oracle Cloud Infrastructure) : permet de déployer et gérer des applications dans le cloud.
 
-Au sein d'Oracle, création d'une instance avec une image ubuntu 2.04 et télécharger les deux clefs (privé et public)
+Au sein d'Oracle, création d'une instance avec une image ubuntu 20.04 et télécharger les deux clefs (privé et public)
 
 connexion à l'instance en SSH : ouverture de Powershell 
 
@@ -92,3 +92,7 @@ commit des fichiers
 
 ![image](https://github.com/user-attachments/assets/73b1fa96-1e6b-4655-bba0-09c50b00a874)
 
+### Connexion à la base de donnée 
+
+![alt text](image.png) 
+avec les variables d'environnement 

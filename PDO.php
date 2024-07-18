@@ -10,11 +10,11 @@
 <h1>Liste des médicaments</h1>
 <?php
 // Connexion à la base de données
-    $host = 'localhost';
-    $db   = 'chartrmedic';
-    $user = getenv('USER') ? getenv('USER') : "root";
-    $pass = getenv('PASSWORD') ? getenv('PASSWORD') : "Azerty123";
-    $charset = 'utf8mb4';
+$host = 'localhost';
+$db   = 'chartrmedic';
+$user = getenv('USER') ? getenv('USER') : "root";
+$pass = getenv('PASSWORD') ? getenv('PASSWORD') : "Azerty123"
+$charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 $options = [
@@ -25,42 +25,31 @@ $options = [
 
 try {
     $pdo = new PDO($dsn, $user, $pass, $options);
-    $sql = ("SELECT id, nom, quantite, description FROM medicament WHERE id = :id");
+
+    // Définir la valeur de l'ID que vous souhaitez sélectionner
+    $id = 1; // Exemple d'ID
+
+    $sql = "SELECT id, nom, quantite, description FROM medicament WHERE id = :id";
     $stmt = $pdo->prepare($sql);
+    $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+
+    // Exécuter la requête
     $stmt->execute();
+
+    // Récupérer les résultats
     $medicaments = $stmt->fetchAll();
 
-    //vérifie si la table contient un élément et afficher les champs de la table
-    if (count($medicaments) > 0) {
-        echo "<table>";
-        echo "<thead>";
-        echo "<tr>";
-        echo "<th>Nom</th>";
-        echo "<th>Quantité</th>";
-        echo "<th>Description</th>";
-        echo "<th>Voir tout</th>";
-        echo "</tr>";
-        echo "</thead>";
-        echo "<tbody>";
-
-        foreach ($medicaments as $medicament) {
-            echo "<tr>";
-            echo "<td>" . ($medicament['nom']) . "</td>";
-            echo "<td>" . ($medicament['quantité']) . "</td>";
-            echo "<td>" . ($medicament['description']) . "</td>";
-            // Lien pour voir et modifier les détails du médicament
-            echo "<td><a href='details.php?id=" . $medicament['id'] . "'>Détails</a></td>";
-            echo "</tr>";
-        }
-
-        echo "</tbody>";
-        echo "</table>";
-    } else {
-        echo "Aucun médicament trouvé.";
+    // Afficher les résultats
+    foreach ($medicaments as $medicament) {
+        echo "ID: " . $medicament['id'] . "<br>";
+        echo "Nom: " . $medicament['nom'] . "<br>";
+        echo "Quantité: " . $medicament['quantite'] . "<br>";
+        echo "Description: " . $medicament['description'] . "<br>";
+        echo "<hr>";
     }
 
-} catch (\PDOException $e) {
-    echo "Erreur : " . $e->getMessage();
+} catch (PDOException $e) {
+    echo "Erreur de connexion : " . $e->getMessage();
 }
 ?>
 </body>
