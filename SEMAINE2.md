@@ -1,6 +1,6 @@
 Création d'un compte oracle
  
-Création d'une nouvelle instance avec ubuntu 22.04 comme image, telecharger les clés ssh
+Création d'une nouvelle instance avec ubuntu 22.04 comme image, télécharger les clés ssh
  
 Installation Putty pour permettre la connexion a l'instance
  
@@ -12,7 +12,7 @@ Commandes à mettre dans le terminal de l'instance :
 sudo apt update
 sudo apt upgrade -y
  
-Installer apache : sudo apt install apache
+Installer apache : sudo apt install apache2
 Installer php : sudo apt install php
 Installer git : sudo apt install git
 

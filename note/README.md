@@ -12,7 +12,7 @@ PHPstorm pour utiliser le PHP
 
 HTML / CSS 
 
-### Accès à MySQL et Apache
+### Accès à MySQL et Apache (local)
 
 installation de XAMPP directement dans la racine du C
 
@@ -51,8 +51,44 @@ $user = 'root';
 $pass = '';
 $charset = 'utf8mb4';
 ``````
+## Technologies utilisées pour déployer le site
 
-##### En cours
+création d'un compte Oracle 
 
-problème pour récupérer les données depuis la BDD dans détails.php
-donc il y a juste le formulaire 
+OCI (Oracle Cloud Infrastructure) : permet de déployer et gérer des applications dans le cloud.
+
+Au sein d'Oracle, création d'une instance avec une image ubuntu 2.04 et télécharger les deux clefs (privé et public)
+
+connexion à l'instance en SSH : ouverture de Powershell 
+
+commande tapée : ssh -i C:\Users\33615\Downloads\ssh-key-2024-07-16.key ubuntu@144.24.206.44 
+
+Apache : sudo apt install apache2
+
+git : sudo apt install git
+
+php : sudo apt install php
+
+SQL : sudo apt install mysql
+
+#### Procédure pour créer la clef SSH avec GIT :
+
+![image](https://github.com/user-attachments/assets/e8795978-518e-4c72-b4d1-5eaf71e673b5)
+
+![image](https://github.com/user-attachments/assets/cdafbf56-216c-4d95-8561-b947baa005f8)
+
+status : pour savoir où j'en suis 
+![image](https://github.com/user-attachments/assets/93648341-b64e-4d66-a9f6-e155030e9bef)
+
+identification de la machine 
+![image](https://github.com/user-attachments/assets/d1b6fb2e-e65e-4c52-95aa-0cd441c3dd80)
+
+commit des fichiers 
+![image](https://github.com/user-attachments/assets/dd11c429-3b05-4fd7-a550-0fad63424aca)
+
+![image](https://github.com/user-attachments/assets/37b0a95e-a05b-4efc-a95d-38eb3a8e4c77)
+
+![image](https://github.com/user-attachments/assets/86cba6dd-7bd4-4faa-a5e2-29e0580ac3f3)
+
+![image](https://github.com/user-attachments/assets/73b1fa96-1e6b-4655-bba0-09c50b00a874)
+

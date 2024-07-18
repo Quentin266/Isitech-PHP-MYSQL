@@ -25,7 +25,7 @@ $options = [
 
 try {
     $pdo = new PDO($dsn, $user, $pass, $options);
-    $sql = ("SELECT id, nom, description FROM utilisateurs WHERE id = :id");
+    $sql = ("SELECT id, nom, quantite, description FROM medicament WHERE id = :id");
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
     $medicaments = $stmt->fetchAll();
